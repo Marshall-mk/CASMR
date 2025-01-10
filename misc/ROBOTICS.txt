@@ -1,0 +1,75 @@
+ROBOTICS
+- Using the robot
+	- Take out the controller
+	- Verify the emergency stop button is not engaged
+	- Place the controller back and push the green button.
+	- That should engage the robot.
+- The first yellow button
+	- To switch between modes.
+	- Make sure it's set to manual/program (hand sign)
+	- to the left of the hand sign is the automatic mode
+
+- Speed selection
+	- Use low speeds 20-50%
+
+- Main Menu
+	- Application manager
+		- Here, the transferred files can be found under disk or USB drive if connected
+	- Task manager
+
+	- Control panel
+
+	- Calibration
+- Joint button (mode)
+	- movement is based on individual joints as in the numbers 1- 6
+	- Joint 1 is base or world frame and 6 is the tcp
+- Frame button (mode)
+	- movement is based on frames X Y Z, rx ry rz
+	- X = back and front
+	- Y = left and right
+	- Z = up and down
+	- rx = rotation around x etc.
+- Tool button (mode)
+	- controls the tool
+- Point button (mode)
+	- 
+
+- To load application
+	> Application Manager > val3 applications > disk > *program name* > F8 (ok) >
+	> Then we can set points by clicking point mode > relative to flange or tool if you have any > F8
+	> If you already have points in your application, you can select any of those points and move there
+	> by pressing and hold MOVE.
+- In the loaded application, the Mode is set to LINE but can be changed using F7 to something like ALIGN.
+	to maybe align your tool with the table.
+- If you switch to ALIGN mode and click MOVE, the tool or flange aligns with the table and this position can 	
+	be saved by changing to JOINT mode (F7) and selecting which point (P1 or ..) to be replaced and 
+	clicking here (F1). Then F4 to save all changes.
+- To run a program
+	> Application Manager > val3 applications > disk > *program name* > F8 (ok) >
+	> Switch to AUTOMATIC mode (left of hand sign) > press power (green button) >
+	> Hit RUN (left of frame button) > F8 (okay) > MOVE button.
+- To pause a program
+	> Hit Move button.
+- To stop a program
+	> Hit Stop button (above speed).
+
+- Home and Work are joints.
+- A and B are points.
+Approximate mouth is a point with rpt to the patient (frame_)
+
+Steps to create the project
+1. Project definition- Done
+2. Block Diagram- done
+3. Robot tool definition
+4. Frame definition
+5. Point definition
+6 . Develop program
+
+- Block diagram> Home> 2 branches
+Robot tool definition - Define syringe tcp
+
+TCP Definition
+
+
+Frame (patient defi)
+		

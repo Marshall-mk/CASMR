@@ -1,0 +1,147 @@
+﻿{
+  "programs": [
+    {
+      "mode": 3,
+      "name": "stop",
+      "nodes": []
+    },
+    {
+      "mode": 3,
+      "name": "programAnes",
+      "nodes": [
+        {
+          "start": 204,
+          "end": 417,
+          "isCollapsed": false
+        },
+        {
+          "start": 248,
+          "end": 344,
+          "isCollapsed": false
+        },
+        {
+          "start": 291,
+          "end": 334,
+          "isCollapsed": false
+        },
+        {
+          "start": 349,
+          "end": 391,
+          "isCollapsed": false
+        },
+        {
+          "start": 828,
+          "end": 983,
+          "isCollapsed": false
+        },
+        {
+          "start": 1396,
+          "end": 1609,
+          "isCollapsed": false
+        },
+        {
+          "start": 1440,
+          "end": 1536,
+          "isCollapsed": false
+        },
+        {
+          "start": 1483,
+          "end": 1526,
+          "isCollapsed": false
+        },
+        {
+          "start": 1541,
+          "end": 1583,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "start",
+      "nodes": [
+        {
+          "start": 821,
+          "end": 1098,
+          "isCollapsed": false
+        },
+        {
+          "start": 865,
+          "end": 1008,
+          "isCollapsed": false
+        },
+        {
+          "start": 932,
+          "end": 998,
+          "isCollapsed": false
+        },
+        {
+          "start": 1013,
+          "end": 1054,
+          "isCollapsed": false
+        },
+        {
+          "start": 1167,
+          "end": 1520,
+          "isCollapsed": false
+        },
+        {
+          "start": 1341,
+          "end": 1512,
+          "isCollapsed": false
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "name": "programSuc",
+      "nodes": [
+        {
+          "start": 204,
+          "end": 417,
+          "isCollapsed": false
+        },
+        {
+          "start": 248,
+          "end": 344,
+          "isCollapsed": false
+        },
+        {
+          "start": 291,
+          "end": 334,
+          "isCollapsed": false
+        },
+        {
+          "start": 349,
+          "end": 391,
+          "isCollapsed": false
+        },
+        {
+          "start": 794,
+          "end": 949,
+          "isCollapsed": false
+        },
+        {
+          "start": 1331,
+          "end": 1544,
+          "isCollapsed": false
+        },
+        {
+          "start": 1375,
+          "end": 1471,
+          "isCollapsed": false
+        },
+        {
+          "start": 1418,
+          "end": 1461,
+          "isCollapsed": false
+        },
+        {
+          "start": 1476,
+          "end": 1518,
+          "isCollapsed": false
+        }
+      ]
+    }
+  ]
+}

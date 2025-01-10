@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<programList xmlns="ProgramNameSpace">
+  <program name="programSuc" public="false">
+    <description />
+    <paramSection />
+    <localSection />
+    <source>
+      <code>begin
+  // change tool
+  movel(gettool,suction[0],slow)
+  waitEndMove()
+  putln("Attach Suction and Press Button")
+  piston_actuator[0]=false
+  // Blink indicators until a button is clicked
+  counter=0
+  do
+    delay(0.1)
+    counter=counter+1
+    if (counter&lt;5)
+      indicator[0]=true
+    elseIf (counter&gt;5)
+      indicator[0]=false
+    endIf
+    if (counter==10)
+      counter=0
+    endIf
+  until (button[0]==true)
+  indicator[0]=false
+  // main operation
+  close(suction)
+  delay(1)
+  putln("Moving back to Work")
+  movej(Work,flange,slow)
+  waitEndMove()
+  putln("Moving to Patient!!")
+  movel(approxMouth,suction[0],slow)
+  movel(approxMouthSuc,suction[0],slow)
+  movel(inMouthSuc,suction[0],slow)
+  waitEndMove()
+  cls()
+  putln("Cleaning .....")
+  piston_actuator[0]=true
+  counter=0
+  do
+    gotoxy(15+counter,6)
+    delay(0.5)
+    putln("I")
+    counter=counter+1
+    gotoxy(17,7)
+    put(20+counter*10)
+    putln("%")
+  until (counter==8)
+  piston_actuator[0]=false
+  gotoxy(0,10)
+  putln("Finished Suctioning!")
+  movel(approxMouthSuc,suction[0],slow)
+  movel(approxMouth,suction[0],slow)
+  movej(Work,suction[0],fast)
+  putln("Moving to Keep Tool")
+  movel(gettool,suction[0],slow)
+  // keep tool
+  open(suction)
+  putln("Remove Suction and Press Button")
+  // Blink indicators until a button is clicked
+  counter=0
+  do
+    delay(0.1)
+    counter=counter+1
+    if (counter&lt;5)
+      indicator[1]=true
+    elseIf (counter&gt;5)
+      indicator[1]=false
+    endIf
+    if (counter==10)
+      counter=0
+    endIf
+  until (button[1]==true)
+  indicator[1]=false
+  close(suction)
+  delay(1)
+  putln("Suction tool successfully returned.")
+  movej(Work,suction[0],slow)
+end
+
+      </code>
+    </source>
+  </program>
+</programList>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<programList xmlns="ProgramNameSpace" >
+  <program name="stop" public="false" >
+    <description />
+    <paramSection/>
+    <localSection/>
+    <source>
+      <code>begin
+  movej(Home,syringe[0],fast)
+  waitEndMove()
+  putln(&quot;Application Stopped&quot;)
+  popUpMsg(&quot;Program Finished&quot;)
+end
+
+      </code>
+    </source>
+  </program>
+</programList>

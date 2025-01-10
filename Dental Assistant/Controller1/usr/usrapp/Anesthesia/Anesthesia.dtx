@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<dataList xmlns="DataNameSpace" >
+  <aioSection />
+  <boolSection />
+  <configRsSection />
+  <configSection />
+  <configVrbSection />
+  <dioSection>
+    <dio name="button" public="false" privilege="0" size="4" />
+    <dio name="indicator" public="false" privilege="0" size="4" />
+    <dio name="piston_actuator" public="false" privilege="0" size="2" />
+    <dio name="piston_sensor" public="false" privilege="0" size="2" />
+  </dioSection>
+  <frameSection>
+    <frame name="patient" public="false" privilege="0" >
+      <fFather alias="" name="world" fatherIndex="0" />
+      <valueFrame index="0" >
+        <tfValue x="477.286828" y="-197.604214" z="-268.000453" rx="-23.858263" ry="27.300799" rz="56.490825" />
+      </valueFrame>
+    </frame>
+    <frame name="world" public="false" privilege="0" >
+      <fFather alias="" name="" fatherIndex="0" />
+      <valueFrame index="0" >
+        <tfValue x="0" y="0" z="0" rx="0" ry="0" rz="0" />
+      </valueFrame>
+    </frame>
+  </frameSection>
+  <jointRsSection />
+  <jointSection>
+    <joint name="Home" public="false" privilege="0" >
+      <valueJoint index="0" >
+        <jointValue j1="0" j2="0" j3="0" j4="0" j5="0" j6="0" />
+      </valueJoint>
+    </joint>
+    <joint name="Work" public="false" privilege="0" >
+      <valueJoint index="0" >
+        <jointValue j1="-31.511378" j2="11.841583" j3="70.387171" j4="0.243468" j5="100.536806" j6="0.061672" />
+      </valueJoint>
+    </joint>
+  </jointSection>
+  <jointVrbSection />
+  <mdescSection>
+    <mdesc name="fast" public="false" privilege="0" >
+      <valueMdesc index="0" >
+        <mdescValue accel="35" vel="35" decel="50" tmax="99999" rmax="99999" blend="off" leave="50" reach="50" />
+      </valueMdesc>
+    </mdesc>
+    <mdesc name="mNomSpeed" public="true" privilege="0" >
+      <valueMdesc index="0" >
+        <mdescValue accel="100" vel="100" decel="100" tmax="99999" rmax="99999" blend="joint" leave="50" reach="50" />
+      </valueMdesc>
+    </mdesc>
+    <mdesc name="slow" public="false" privilege="0" >
+      <valueMdesc index="0" >
+        <mdescValue accel="20" vel="10" decel="20" tmax="99999" rmax="99999" blend="off" leave="50" reach="50" />
+      </valueMdesc>
+    </mdesc>
+  </mdescSection>
+  <numSection>
+    <num name="counter" public="false" privilege="0" >
+      <valueNum index="0" value="0" />
+    </num>
+  </numSection>
+  <pointRsSection />
+  <pointSection>
+    <point name="approxMouth" public="false" privilege="0" >
+      <pFather alias="" name="patient" fatherIndex="0" />
+      <valuePoint index="0" >
+        <tpValue x="-2.334981" y="-9.060477" z="15.573419" rx="-14.53001" ry="104.769987" rz="-13.439978" />
+        <cpValue shoulder="lefty" elbow="epositive" wrist="wpositive"/>
+      </valuePoint>
+    </point>
+    <point name="approxMouthSuc" public="false" privilege="0" >
+      <pFather alias="" name="patient" fatherIndex="0" />
+      <valuePoint index="0" >
+        <tpValue x="78.807259" y="-12.780948" z="0.249589" rx="-12.599904" ry="104.362841" rz="-13.685667" />
+        <cpValue shoulder="ssame" elbow="esame" wrist="wsame"/>
+      </valuePoint>
+    </point>
+    <point name="approxSkin" public="false" privilege="0" >
+      <pFather alias="" name="patient" fatherIndex="0" />
+      <valuePoint index="0" >
+        <tpValue x="47.259606" y="15.299663" z="5.600504" rx="34.715726" ry="115.212708" rz="-62.148743" />
+        <cpValue shoulder="lefty" elbow="epositive" wrist="wpositive"/>
+      </valuePoint>
+    </point>
+    <point name="cal" public="false" privilege="0" >
+      <pFather alias="" name="world" fatherIndex="0" />
+      <valuePoint index="0" >
+        <tpValue x="493.692732" y="-199.752251" z="-269.214145" rx="-178.353399" ry="-2.221855" rz="77.530219" />
+        <cpValue shoulder="ssame" elbow="esame" wrist="wsame"/>
+      </valuePoint>
+      <valuePoint index="1" >
+        <tpValue x="507.743822" y="-173.717406" z="-295.75414" rx="31.170444" ry="153.404792" rz="-48.770196" />
+        <cpValue shoulder="ssame" elbow="esame" wrist="wsame"/>
+      </valuePoint>
+      <valuePoint index="2" >
+        <tpValue x="484.626811" y="-148.34259" z="-293.929846" rx="31.171693" ry="153.40645" rz="-48.770423" />
+        <cpValue shoulder="ssame" elbow="esame" wrist="wsame"/>
+      </valuePoint>
+      <valuePoint index="3" >
+        <tpValue x="0" y="0" z="0" rx="0" ry="0" rz="0" />
+        <cpValue shoulder="ssame" elbow="esame" wrist="wsame"/>
+      </valuePoint>
+    </point>
+    <point name="gettool" public="false" privilege="0" >
+      <pFather alias="" name="patient" fatherIndex="0" />
+      <valuePoint index="0" >
+        <tpValue x="-261.667149" y="-334.543853" z="71.47145" rx="-51.016382" ry="156.278603" rz="-17.802727" />
+        <cpValue shoulder="ssame" elbow="esame" wrist="wsame"/>
+      </valuePoint>
+    </point>
+    <point name="inMouthSuc" public="false" privilege="0" >
+      <pFather alias="" name="patient" fatherIndex="0" />
+      <valuePoint index="0" >
+        <tpValue x="124.228324" y="-10.3642" z="-7.612798" rx="-13.68808" ry="104.079277" rz="-12.62487" />
+        <cpValue shoulder="ssame" elbow="esame" wrist="wsame"/>
+      </valuePoint>
+    </point>
+    <point name="insideSkin" public="false" privilege="0" >
+      <pFather alias="" name="patient" fatherIndex="0" />
+      <valuePoint index="0" >
+        <tpValue x="57.890848" y="18.163781" z="1.484572" rx="34.722842" ry="115.215151" rz="-62.155056" />
+        <cpValue shoulder="lefty" elbow="epositive" wrist="wpositive"/>
+      </valuePoint>
+    </point>
+    <point name="transition" public="false" privilege="0" >
+      <pFather alias="" name="patient" fatherIndex="0" />
+      <valuePoint index="0" >
+        <tpValue x="40.434535" y="-11.61247" z="5.335014" rx="-14.526715" ry="104.769928" rz="-13.443001" />
+        <cpValue shoulder="lefty" elbow="epositive" wrist="wpositive"/>
+      </valuePoint>
+    </point>
+  </pointSection>
+  <pointVrbSection />
+  <sioSection />
+  <stringSection />
+  <toolSection>
+    <tool name="flange" public="false" privilege="0" >
+      <tFather alias="" name="" fatherIndex="0" />
+      <valueTool index="0" >
+        <ttValue x="0" y="0" z="0" rx="0" ry="0" rz="0" />
+        <io alias="io" name="valve1" ioIndex="0" open="0" close="0" />
+      </valueTool>
+    </tool>
+    <tool name="suction" public="false" privilege="0" >
+      <tFather alias="" name="flange" fatherIndex="0" />
+      <valueTool index="0" >
+        <ttValue x="-30" y="-30" z="353" rx="0" ry="0" rz="-134" />
+        <io alias="io" name="valve1" ioIndex="0" open="0" close="0" />
+      </valueTool>
+    </tool>
+    <tool name="syringe" public="false" privilege="0" >
+      <tFather alias="" name="flange" fatherIndex="0" />
+      <valueTool index="0" >
+        <ttValue x="-30" y="-30" z="353" rx="0" ry="0" rz="-134" />
+        <io alias="io" name="valve1" ioIndex="0" open="0" close="0" />
+      </valueTool>
+    </tool>
+  </toolSection>
+  <trsfSection />
+</dataList>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<programList xmlns="ProgramNameSpace">
+  <program name="main2" public="false">
+    <description />
+    <paramSection />
+    <localSection />
+    <source>
+      <code>begin
+  // change tool
+  putln("Attach Suction and Press Button")
+  indicator[0] = true
+  piston_actuator[0] = false
+  wait(button[0] == true)
+  indicator[0] = false
+  close(suction)
+  delay(1)
+  putln("Moving to Patient!!")
+  movel(approxMouth, suction[0], slow)
+  movel(transition, suction[0], slow)
+  // replace two positions
+  movel(approxMouthSuc, suction[0], slow)
+  movel(inMouthSuc, suction[0], slow)
+  waitEndMove()
+  putln("Cleaning .....")
+  gotoxy(19, 6)
+  putln("IIIIIIIIIIIIII")
+  piston_actuator[0] = true
+  delay(5)
+  piston_actuator[0] = false
+  putln("Finished Suctioning!")
+  // replace two positions
+  movel(approxMouthSuc, suction[0], slow)
+  movel(transition, suction[0], slow)
+  movel(approxMouth, suction[0], slow)
+  movej(Work, suction[0], fast)
+  // keep tool
+  open(suction)
+  indicator[1] = true
+  putln("Remove Suction and Press Button")
+  wait(button[1] == true)
+  indicator[1] = false
+  close(suction)
+  delay(1)
+  putln("Suction tool successfully returned.") 
+end
+
+      </code>
+    </source>
+  </program>
+</programList>

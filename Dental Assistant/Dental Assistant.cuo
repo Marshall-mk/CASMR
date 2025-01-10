@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CellUserOptions>
+  <Controller Name="Controller1">
+    <Application>Disk://Anesthesia/Anesthesia.pjx</Application>
+  </Controller>
+  <Option Name="DataTreeView">
+    <Nodes>
+      <Node Path="Dental Assistant" IsExpanded="true" />
+      <Node Path="Dental Assistant\Controller1" IsExpanded="true" />
+      <Node Path="Dental Assistant\Controller1\Disk:##Anesthesia#Anesthesia.pjx" IsExpanded="true" />
+      <Node Path="Dental Assistant\Controller1\Disk:##Anesthesia#Anesthesia.pjx\frame" IsExpanded="true" />
+      <Node Path="Dental Assistant\Controller1\Disk:##Anesthesia#Anesthesia.pjx\pointRx" IsExpanded="true" />
+    </Nodes>
+  </Option>
+  <Option Name="CellExplorer">
+    <Nodes>
+      <Node Path="Dental Assistant" IsExpanded="true" />
+      <Node Path="Dental Assistant\Controller1" IsExpanded="true" />
+      <Node Path="Dental Assistant\Controller1\Disk:##Anesthesia#Anesthesia.pjx" IsExpanded="true" />
+      <Node Path="Dental Assistant\Controller1\Disk:##Anesthesia#Anesthesia.pjx\programSuc" IsExpanded="true" />
+    </Nodes>
+  </Option>
+  <Option Name="GeometryView">
+    <Nodes>
+      <Node Path="Dental Assistant" IsExpanded="true" />
+      <Node Path="Dental Assistant\Controller1" IsExpanded="true" />
+      <Node Path="Dental Assistant\Controller1\Anesthesia" IsExpanded="true" />
+      <Node Path="Dental Assistant\Controller1\Anesthesia\world[0]" IsExpanded="true" />
+      <Node Path="Dental Assistant\Controller1\Anesthesia\world[0]\patient" IsExpanded="true" />
+      <Node Path="Dental Assistant\Controller1\Anesthesia\flange[0]" IsExpanded="true" />
+    </Nodes>
+  </Option>
+  <Option Name="Breakpoints">
+    <Breakpoints />
+  </Option>
+  <Option Name="IOsControlPanel">
+    <Ios />
+  </Option>
+  <Option Name="Watches">
+    <Watches />
+  </Option>
+  <Option Name="ExpressionWatches">
+    <ExpressionWatches>
+      <ExpressionWatch></ExpressionWatch>
+    </ExpressionWatches>
+  </Option>
+  <Option Name="3DView">
+    <_3DView Visible="true" />
+  </Option>
+  <Option Name="SynchronizerMode">
+    <Synchronizers>
+      <Synchronizer Controller="Controller1" Mode="Emulator" />
+    </Synchronizers>
+  </Option>
+  <Option Name="Safety">
+    <Safeties />
+  </Option>
+</CellUserOptions>

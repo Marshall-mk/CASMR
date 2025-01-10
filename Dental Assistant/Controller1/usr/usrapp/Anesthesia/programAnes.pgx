@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<programList xmlns="ProgramNameSpace" >
+  <program name="programAnes" public="false" >
+    <description />
+    <paramSection/>
+    <localSection/>
+    <source>
+      <code>begin
+  // change tool
+  movel(gettool,syringe[0],slow)
+  waitEndMove()
+  putln(&quot;Attach Syringe and Press Button&quot;)
+  piston_actuator[0]=false
+  // Blink indicators until a button is clicked
+  counter=0
+  do
+    delay(0.1)
+    counter=counter+1
+    if (counter&lt;5)
+      indicator[0]=true
+    elseIf (counter&gt;5)
+      indicator[0]=false
+    endIf
+    if (counter==10)
+      counter=0
+    endIf
+  until (button[0]==true)
+  indicator[0]=false
+  // main operation
+  close(syringe)
+  delay(1)
+  putln(&quot;Moving back to Work&quot;)
+  movej(Work,flange,slow)
+  waitEndMove()
+  putln(&quot;Moving to Patient!!&quot;)
+  movel(approxMouth,syringe[0],slow)
+  movel(transition,syringe[0],slow)
+  movel(approxSkin,syringe[0],slow)
+  movel(insideSkin,syringe[0],slow)
+  waitEndMove()
+  cls()
+  putln(&quot;Injecting ......&quot;)
+  piston_actuator[0]=true
+  counter=0
+  do
+    gotoxy(15+counter,6)
+    delay(0.5)
+    putln(&quot;I&quot;)
+    counter=counter+1
+    gotoxy(17,7)
+    put(20+counter*10)
+    putln(&quot;%&quot;)
+  until (counter==8)
+  piston_actuator[0]=false
+  gotoxy(0,10)
+  putln(&quot;Finished Injecting!&quot;)
+  movel(approxSkin,syringe[0],slow)
+  movel(transition,syringe[0],slow)
+  movel(approxMouth,syringe[0],slow)
+  movej(Work,syringe[0],fast)
+  putln(&quot;Moving to Keep Tool&quot;)
+  movel(gettool,syringe[0],slow)
+  // keep tool
+  open(syringe)
+  putln(&quot;Remove Syringe and Press Button&quot;)
+  // Blink indicators until a button is clicked
+  counter=0
+  do
+    delay(0.1)
+    counter=counter+1
+    if (counter&lt;5)
+      indicator[1]=true
+    elseIf (counter&gt;5)
+      indicator[1]=false
+    endIf
+    if (counter==10)
+      counter=0
+    endIf
+  until (button[1]==true)
+  indicator[1]=false
+  close(syringe)
+  delay(1)
+  putln(&quot;Syringe tool successfully returned.&quot;)
+  movej(Work,syringe[0],slow)
+end
+
+      </code>
+    </source>
+  </program>
+</programList>

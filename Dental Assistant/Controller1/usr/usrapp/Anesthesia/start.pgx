@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<programList xmlns="ProgramNameSpace">
+  <program name="start" public="false">
+    <description />
+    <paramSection />
+    <localSection />
+    <source>
+      <code>begin
+  // accesssory definition
+  dioLink(button[0],io:bIn4)
+  dioLink(button[1],io:bIn5)
+  dioLink(button[2],io:bIn6)
+  dioLink(button[3],io:bIn7)
+  dioLink(indicator[0],io:bOut4)
+  dioLink(indicator[1],io:bOut5)
+  dioLink(indicator[2],io:bOut6)
+  dioLink(indicator[3],io:bOut7)
+  dioLink(piston_actuator[0],io:bOut10)
+  dioLink(piston_sensor[0],io:bOut14)
+  dioLink(piston_sensor[1],io:bOut15)
+  
+  userPage()
+  cls()
+  title("Dental Program")
+  enablePower()
+  putln("Moving to Home")
+  movej(Home,flange,fast)
+  waitEndMove()
+  open(syringe)
+  delay(1)
+  putln("Arm at Home!")
+  putln("Moving to Work Area!")
+  movej(Work,flange,fast)
+  waitEndMove()
+  putln("Arm at Work Area!")
+  putln("Press Button")
+  putln("1 = Anesthesia and 2 = Suction")
+  
+  // flash indicators prompting the buttons to press
+  counter=0
+  do
+    delay(0.1)
+    counter=counter+1
+    if(counter&lt;5)
+      indicator[0]=true
+      indicator[1]=false
+    elseIf(counter&gt;5)
+      indicator[0]=false
+      indicator[1]=true
+    endIf
+    if(counter==10)
+      counter=0
+    endIf
+  until(button[0]==true or button[1]==true)
+  
+  // based on the user selection,
+  // run one of the progrmas
+  if(button[0]==true)
+    indicator[0]=false
+    indicator[1]=false
+    cls()
+    putln("Anesthesia!!")
+    putln("Moving to Place Tool")
+    delay(2)
+    call programAnes()
+  elseIf(button[1]==true)
+    indicator[0]=false
+    indicator[1]=false
+    cls()
+    putln("Suction!!")
+    putln("Moving to Place Tool")
+    delay(2)
+    call programSuc()
+  endIf
+end
+
+      </code>
+    </source>
+  </program>
+</programList>

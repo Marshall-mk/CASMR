@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<programList xmlns="ProgramNameSpace">
+  <program name="main" public="false">
+    <description />
+    <paramSection />
+    <localSection />
+    <source>
+      <code>begin
+  // change tool
+  indicator[0]=true
+  piston_actuator[0]=false
+  putln("Attach Syringe and Press Button")
+  wait(button[0]==true)
+  indicator[0]=false
+  close(syringe)
+  delay(1)
+  putln("Moving to Patient!!")
+  movel(approxMouth,syringe[0],slow)
+  movel(transition,syringe[0],slow)
+  movel(approxSkin,syringe[0],slow)
+  movel(insideSkin,syringe[0],slow)
+  waitEndMove()
+  putln("Injecting ......")
+  gotoxy(19, 6)
+  putln("IIIIIIIIIIIIII")
+  piston_actuator[0]=true
+  // push the other device
+  delay(5)
+  piston_actuator[0]=false
+  putln("Finished Injecting!")
+  movel(approxSkin,syringe[0],slow)
+  movel(transition,syringe[0],slow)
+  movel(approxMouth,syringe[0],slow)
+  movej(Work,syringe[0],fast)
+  // keep tool
+  open(syringe)
+  indicator[1]=true
+  putln("Remove Syringe and Press Button")
+  wait(button[1]==true)
+  indicator[1]=false
+  close(syringe)
+  delay(1)
+  putln("Syringe tool successfully returned.")
+end
+
+      </code>
+    </source>
+  </program>
+</programList>
